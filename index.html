@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    
+    <!-- Theme Flash Prevention Script -->
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('akash_portfolio_theme');
+          var root = document.documentElement;
+          if (saved === 'light' || (!saved && window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+            root.classList.remove('dark');
+            root.classList.add('light');
+          } else {
+            root.classList.add('dark');
+            root.classList.remove('light');
+          }
+        } catch (e) {}
+      })();
+    </script>
+
+    <!-- Primary Meta Tags -->
+    <title>Akash Singh | Athlete & Personal Brand – Official Portfolio</title>
+    <meta name="title" content="Akash Singh | Athlete & Personal Brand – Official Portfolio" />
+    <meta name="description" content="Official personal portfolio of Akash Singh – Athlete & Personal Brand. Explore his journey, rugby passion, Paaji Fitness Club Roorkee, and collaboration opportunities." />
+    <meta name="keywords" content="Akash Singh, Athlete, Rugby, Paaji Fitness Club Roorkee, Sports, Brand Collaborations, Sponsorships, Fitness" />
+    <meta name="author" content="Akash Singh" />
+    <meta name="theme-color" content="#0B0B0B" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Akash Singh | Athlete & Personal Brand" />
+    <meta property="og:description" content="Explore Akash Singh's journey, sports passion, social connections, and professional collaboration opportunities." />
+    <meta property="og:image" content="/images/akash-singh.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Akash Singh | Athlete & Personal Brand" />
+    <meta property="twitter:description" content="Explore Akash Singh's journey, sports passion, social connections, and professional collaboration opportunities." />
+    <meta property="twitter:image" content="/images/akash-singh.jpg" />
+
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-theme-bg text-theme-textPrimary font-sans antialiased min-h-screen overflow-x-hidden transition-colors duration-300 selection:bg-theme-accent selection:text-theme-accentText">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
