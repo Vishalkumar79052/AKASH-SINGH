@@ -62,6 +62,7 @@ export interface TranslationDictionary {
     visitInstagram: string;
     connectFacebook: string;
     subscribeYoutube: string;
+    chatWhatsapp: string;
     officialBadge: string;
     subscribersLabel: string;
   };
@@ -86,6 +87,7 @@ export interface TranslationDictionary {
     directTitle: string;
     directSubtitle: string;
     emailLabel: string;
+    whatsappLabel: string;
     instagramLabel: string;
     facebookLabel: string;
     youtubeLabel: string;
@@ -278,6 +280,7 @@ export const translations: Record<Language, TranslationDictionary> = {
       visitInstagram: "Follow on Instagram",
       connectFacebook: "Connect on Facebook",
       subscribeYoutube: "Subscribe on YouTube",
+      chatWhatsapp: "Chat on WhatsApp",
       officialBadge: "Official Profile",
       subscribersLabel: "Paaji Fitness Club Roorkee",
     },
@@ -323,6 +326,7 @@ export const translations: Record<Language, TranslationDictionary> = {
       directTitle: "Direct Channels",
       directSubtitle: "Prefer direct messaging or email? Feel free to reach out on any platform below.",
       emailLabel: "Direct Email",
+      whatsappLabel: "WhatsApp Direct",
       instagramLabel: "Instagram DM",
       facebookLabel: "Facebook Profile",
       youtubeLabel: "YouTube Channel",
@@ -515,6 +519,7 @@ export const translations: Record<Language, TranslationDictionary> = {
       visitInstagram: "Instagram Par Follow Karein",
       connectFacebook: "Facebook Par Connect Karein",
       subscribeYoutube: "YouTube Par Subscribe Karein",
+      chatWhatsapp: "WhatsApp Par Chat Karein",
       officialBadge: "Official Profile",
       subscribersLabel: "Paaji Fitness Club Roorkee",
     },
@@ -560,6 +565,7 @@ export const translations: Record<Language, TranslationDictionary> = {
       directTitle: "Direct Channels",
       directSubtitle: "Aap direct social media messaging ya email ke zariye bhi contact kar sakte hain.",
       emailLabel: "Direct Email",
+      whatsappLabel: "WhatsApp Direct",
       instagramLabel: "Instagram DM",
       facebookLabel: "Facebook Profile",
       youtubeLabel: "YouTube Channel",

@@ -11,6 +11,7 @@ import { Collaboration } from './components/Collaboration';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { BackToTop } from './components/BackToTop';
+import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 
 export const AppContent: React.FC = () => {
   const [selectedCollaborationCategory, setSelectedCollaborationCategory] =
@@ -39,7 +40,7 @@ export const AppContent: React.FC = () => {
         {/* 3. Sports Journey & Athletic Pillars */}
         <SportsJourney />
 
-        {/* 4. Social Media Section (Instagram, Facebook, Paaji Fitness Club YouTube) */}
+        {/* 4. Social Media Section (WhatsApp, Instagram, Facebook, Paaji Fitness Club YouTube) */}
         <Socials />
 
         {/* 5. Collaboration Section */}
@@ -51,6 +52,9 @@ export const AppContent: React.FC = () => {
 
       {/* 7. Footer */}
       <Footer />
+
+      {/* Floating Direct WhatsApp Instant SMS */}
+      <FloatingWhatsApp />
 
       {/* Floating Back to Top */}
       <BackToTop />

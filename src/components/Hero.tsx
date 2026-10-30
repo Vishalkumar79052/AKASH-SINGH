@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Handshake, ShieldCheck, CheckCircle2 } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 import { useLanguage } from '../context/LanguageContext';
-import { InstagramIcon, FacebookIcon, YoutubeIcon } from './SocialIcons';
+import { InstagramIcon, FacebookIcon, YoutubeIcon, WhatsAppIcon } from './SocialIcons';
 
 export const Hero: React.FC = () => {
   const { personal, socials } = portfolioData;
@@ -16,6 +16,7 @@ export const Hero: React.FC = () => {
     }
   };
 
+  const whatsapp = socials.find((s) => s.id === 'whatsapp');
   const instagram = socials.find((s) => s.id === 'instagram');
   const facebook = socials.find((s) => s.id === 'facebook');
   const youtube = socials.find((s) => s.id === 'youtube');
@@ -149,6 +150,19 @@ export const Hero: React.FC = () => {
                 </a>
               )}
 
+              {whatsapp && (
+                <a
+                  href={whatsapp.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-theme-surface border border-theme-border flex items-center justify-center text-theme-textSecondary hover:text-[#25D366] hover:border-[#25D366] shadow-theme-subtle transition-all"
+                  aria-label="Direct WhatsApp SMS"
+                  title="Direct WhatsApp: +91 8954625571"
+                >
+                  <WhatsAppIcon className="w-4 h-4 text-[#25D366]" />
+                </a>
+              )}
+
               {youtube && (
                 <a
                   href={youtube.url}
@@ -156,6 +170,7 @@ export const Hero: React.FC = () => {
                   rel="noopener noreferrer"
                   className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-theme-surface border border-theme-border flex items-center justify-center text-theme-textSecondary hover:text-[#FF0000] hover:border-[#FF0000] shadow-theme-subtle transition-all"
                   aria-label="YouTube Channel"
+                  title="Paaji Fitness Club Roorkee"
                 >
                   <YoutubeIcon className="w-4 h-4" />
                 </a>

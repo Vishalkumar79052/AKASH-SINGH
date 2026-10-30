@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowUpRight, ArrowUp } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 import { useLanguage } from '../context/LanguageContext';
-import { InstagramIcon, FacebookIcon, YoutubeIcon } from './SocialIcons';
+import { InstagramIcon, FacebookIcon, YoutubeIcon, WhatsAppIcon } from './SocialIcons';
 
 export const Footer: React.FC = () => {
   const { socials } = portfolioData;
@@ -21,14 +21,15 @@ export const Footer: React.FC = () => {
   };
 
   const navItems = [
-    { label: t.nav.home, href: '#home' },
-    { label: t.nav.about, href: '#about' },
-    { label: t.nav.journey, href: '#journey' },
-    { label: t.nav.socials, href: '#socials' },
-    { label: t.nav.collaboration, href: '#collaboration' },
-    { label: t.nav.contact, href: '#contact' },
+    { label: t.nav.home, href: '#home', id: 'home' },
+    { label: t.nav.about, href: '#about', id: 'about' },
+    { label: t.nav.journey, href: '#journey', id: 'journey' },
+    { label: t.nav.socials, href: '#socials', id: 'socials' },
+    { label: t.nav.collaboration, href: '#collaboration', id: 'collaboration' },
+    { label: t.nav.contact, href: '#contact', id: 'contact' },
   ];
 
+  const whatsappLink = socials.find((s) => s.id === 'whatsapp')?.url;
   const instagramLink = socials.find((s) => s.id === 'instagram')?.url;
   const facebookLink = socials.find((s) => s.id === 'facebook')?.url;
   const youtubeLink = socials.find((s) => s.id === 'youtube')?.url;
@@ -89,6 +90,18 @@ export const Footer: React.FC = () => {
                   aria-label="YouTube Channel"
                 >
                   <YoutubeIcon className="w-4 h-4" />
+                </a>
+              )}
+              {whatsappLink && (
+                <a
+                  href={whatsappLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-xl bg-theme-card border border-theme-border flex items-center justify-center text-theme-textSecondary hover:text-[#25D366] hover:border-[#25D366] transition-colors shadow-sm"
+                  aria-label="Direct WhatsApp SMS"
+                  title="Direct WhatsApp: +91 8954625571"
+                >
+                  <WhatsAppIcon className="w-4 h-4" />
                 </a>
               )}
             </div>

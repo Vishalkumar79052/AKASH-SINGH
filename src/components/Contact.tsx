@@ -10,7 +10,7 @@ import {
 } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 import { useLanguage } from '../context/LanguageContext';
-import { InstagramIcon, FacebookIcon, YoutubeIcon } from './SocialIcons';
+import { InstagramIcon, FacebookIcon, YoutubeIcon, WhatsAppIcon } from './SocialIcons';
 
 interface ContactProps {
   selectedCategory?: string;
@@ -233,6 +233,36 @@ export const Contact: React.FC<ContactProps> = ({ selectedCategory }) => {
                     title="Send Email"
                   >
                     <ExternalLink className="w-4 h-4" />
+                  </a>
+                </div>
+
+                {/* WhatsApp Direct Chat */}
+                <div className="p-3.5 sm:p-4 rounded-2xl bg-theme-surface border border-theme-border flex items-center justify-between hover:border-[#25D366] transition-colors">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-[#25D366]/10 border border-[#25D366]/30 flex items-center justify-center text-[#25D366] shrink-0">
+                      <WhatsAppIcon className="w-5 h-5 text-[#25D366]" />
+                    </div>
+                    <div className="min-w-0 pr-2">
+                      <div className="flex items-center gap-1.5">
+                        <p className="text-[10px] sm:text-[11px] font-mono uppercase text-theme-textSecondary">
+                          {t.contact.whatsappLabel}
+                        </p>
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#25D366] animate-pulse"></span>
+                      </div>
+                      <p className="text-xs sm:text-sm font-semibold text-theme-textPrimary truncate">
+                        +91 8954625571
+                      </p>
+                    </div>
+                  </div>
+                  <a
+                    href={personal.whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 py-1.5 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white text-xs font-bold font-heading uppercase tracking-wider flex items-center gap-1.5 transition-all shadow-sm active:scale-95 shrink-0"
+                    title="Direct WhatsApp SMS"
+                  >
+                    <span>SMS / Chat</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
                   </a>
                 </div>
 

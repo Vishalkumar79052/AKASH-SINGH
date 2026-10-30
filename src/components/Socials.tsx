@@ -11,6 +11,7 @@ import {
   InstagramIcon,
   FacebookIcon,
   YoutubeIcon,
+  WhatsAppIcon,
 } from './SocialIcons';
 
 export const Socials: React.FC = () => {
@@ -19,6 +20,8 @@ export const Socials: React.FC = () => {
 
   const getPlatformIcon = (id: string) => {
     switch (id) {
+      case 'whatsapp':
+        return <WhatsAppIcon className="w-7 h-7 text-[#25D366]" />;
       case 'instagram':
         return <InstagramIcon className="w-7 h-7 text-[#E1306C]" />;
       case 'facebook':
@@ -32,6 +35,8 @@ export const Socials: React.FC = () => {
 
   const getButtonLabel = (id: string) => {
     switch (id) {
+      case 'whatsapp':
+        return t.socials.chatWhatsapp;
       case 'instagram':
         return t.socials.visitInstagram;
       case 'facebook':
@@ -67,8 +72,8 @@ export const Socials: React.FC = () => {
           </p>
         </div>
 
-        {/* 3 Premium Interactive Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
+        {/* 4 Premium Interactive Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 lg:gap-8">
           {socials.map((item: SocialLink, idx: number) => (
             <motion.div
               key={item.id}

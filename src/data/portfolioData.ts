@@ -22,6 +22,9 @@ export interface SiteConfig {
     heroDescription: string;
     location: string;
     email: string;
+    phone: string;
+    whatsappNumber: string;
+    whatsappUrl: string;
     profileImage: string;
     heroBgImage: string;
     rugbyImage: string;
@@ -45,8 +48,12 @@ export const portfolioData: SiteConfig = {
     heroDescription:
       "Welcome to my personal space. Explore my journey, connect with me, and let's create something meaningful together.",
     location: "Roorkee, India",
-    email: "contact.akashsingh@gmail.com",
-    profileImage: "/images/akash-singh.jpg", // The actual uploaded photo
+    email: "akashsingh44779@gmail.com",
+    phone: "+91 8954625571",
+    whatsappNumber: "8954625571",
+    whatsappUrl:
+      "https://wa.me/918954625571?text=Hello%20Akash%2C%20I%20visited%20your%20portfolio%20website%20and%20would%20like%20to%20connect%20for%20a%20collaboration.",
+    profileImage: "/images/akash-singh.jpg",
     heroBgImage: "/images/hero-athlete.jpg",
     rugbyImage: "/images/rugby-action.jpg",
   },
@@ -59,6 +66,17 @@ export const portfolioData: SiteConfig = {
     { key: "contact", href: "#contact" },
   ],
   socials: [
+    {
+      id: "whatsapp",
+      platform: "WhatsApp",
+      handle: "+91 8954625571",
+      url: "https://wa.me/918954625571?text=Hello%20Akash%2C%20I%20visited%20your%20portfolio%20website%20and%20would%20like%20to%20connect%20for%20a%20collaboration.",
+      isLive: true,
+      description: "Direct instant WhatsApp messaging for brand collaborations, sponsorship inquiries, and event bookings.",
+      badge: "Instant Chat",
+      color: "#25D366",
+      ctaText: "Chat on WhatsApp",
+    },
     {
       id: "instagram",
       platform: "Instagram",
